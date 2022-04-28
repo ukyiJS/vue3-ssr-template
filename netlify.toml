@@ -1,4 +1,13 @@
 [build]
-  command="pnpm build"
-  functions="dist/server"
-  publish="dist"
+command = "npx pnpm install --store=node_modules/.pnpm-store && npx pnpm build"
+functions = "dist/server"
+publish = "dist"
+
+[build.environment]
+NPM_FLAGS = "--version"
+
+[[plugins]]
+package = "/netlify-plugin-cache"
+
+[plugins.inputs]
+paths = [".pnpm"]
