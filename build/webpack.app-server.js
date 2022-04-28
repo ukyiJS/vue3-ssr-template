@@ -5,7 +5,6 @@ const webpack = require('webpack');
 const path = require('path');
 const WebpackBar = require('webpackbar');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { appConf } = require('../config');
 const common = require('./webpack.common');
 
 const isProd = process.env.NODE_ENV === 'production';
@@ -16,8 +15,8 @@ const config = {
     app: './src/entry-server.ts',
   },
   output: {
-    path: path.resolve(process.cwd(), 'dist'),
-    filename: `${appConf.assetsDir}/js/[name]-server.[contenthash:8].js`,
+    path: path.join(process.cwd(), 'dist'),
+    filename: 'assets/js/[name]-server.[contenthash:8].js',
     publicPath: '/',
     libraryTarget: 'commonjs2',
   },

@@ -1,16 +1,15 @@
-const isProd = process.env.NODE_ENV === 'production';
 const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
-const { appConf } = require('../config');
 
-const resolve = (...paths) => path.resolve(process.cwd(), ...paths);
+const isProd = process.env.NODE_ENV === 'production';
+const resolve = (...paths) => path.join(process.cwd(), ...paths);
 
 module.exports = {
   mode: isProd ? 'production' : 'development',
   devtool: !isProd && 'source-map',
   stats: 'minimal',
   output: {
-    assetModuleFilename: `${appConf.assetsDir}/img/[name].[contenthash:8][ext][query]`,
+    assetModuleFilename: 'assets/img/[name].[contenthash:8][ext][query]',
   },
   module: {
     rules: [

@@ -6,7 +6,6 @@ const path = require('path');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const PreloadWebpackPlugin = require('@vue/preload-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const { appConf } = require('../config');
 const common = require('./webpack.common');
 
 const isProd = process.env.NODE_ENV === 'production';
@@ -16,8 +15,8 @@ let config = {
     app: './src/entry-client.ts',
   },
   output: {
-    path: path.resolve(process.cwd(), 'dist'),
-    filename: `${appConf.assetsDir}/js/[name].[contenthash:8].js`,
+    path: path.join(process.cwd(), 'dist'),
+    filename: 'assets/js/[name].[contenthash:8].js',
     publicPath: '/',
   },
   module: {
