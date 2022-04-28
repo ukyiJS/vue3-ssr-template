@@ -5,9 +5,6 @@ context:
 headers:
   countryLanguage: "x-country-language"
 
-assetsDir: assets
-
-
 cacheControl:
   pages:
     home: 15552000
