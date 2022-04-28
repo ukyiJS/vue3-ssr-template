@@ -43,7 +43,6 @@ let config = {
       inject: 'body',
       minify: {
         collapseWhitespace: isProd,
-        removeComments: false,
       },
     }),
     new CopyPlugin({
