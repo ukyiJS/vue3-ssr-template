@@ -1,6 +1,7 @@
 const path = require('path');
 const WebpackBar = require('webpackbar');
 const WebpackNodeExternals = require('webpack-node-externals');
+const common = require('webpack.common');
 
 const isProd = process.env.NODE_ENV === 'production';
 
