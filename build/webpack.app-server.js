@@ -72,7 +72,7 @@ const config = {
       maxChunks: 1,
     }),
     new MiniCssExtractPlugin({
-      filename: `${appConf.assetsDir}/css/[name].[contenthash:8].css`,
+      filename: 'assets/css/[name].[contenthash:8].css',
       ignoreOrder: true,
     }),
   ],
