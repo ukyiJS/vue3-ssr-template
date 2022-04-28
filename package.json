@@ -14,7 +14,8 @@
     "build:app": "rm -rf dist && run-s build:app-client build:app-server",
     "build:app-client": "cross-env NODE_ENV=production webpack --config build/webpack.app-client",
     "build:app-server": "cross-env NODE_ENV=production webpack --config build/webpack.app-server",
-    "build:server": "rm -rf dist/server && cross-env NODE_ENV=production webpack --config build/webpack.server"
+    "build:server": "rm -rf dist/server && cross-env NODE_ENV=production webpack --config build/webpack.server",
+    "postbuild": "node ./build/post-build.js"
   },
   "dependencies": {
     "@vueuse/head": "^0.7.6",
@@ -52,6 +53,7 @@
     "eslint-plugin-vue": "^8.7.1",
     "esno": "^0.14.1",
     "express": "^4.18.0",
+    "fs-extra": "^10.1.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
     "npm-run-all": "^4.1.5",

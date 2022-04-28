@@ -45,18 +45,6 @@ let config = {
         collapseWhitespace: isProd,
       },
     }),
-    new CopyPlugin({
-      patterns: [
-        {
-          from: 'public/**',
-          to: '[name][ext]',
-          globOptions: {
-            ignore: ['**/index.html'],
-            gitignore: true,
-          },
-        },
-      ],
-    }),
     new PreloadWebpackPlugin({
       rel: 'prefetch',
       include: 'asyncChunks',
