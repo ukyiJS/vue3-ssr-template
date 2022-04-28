@@ -4,9 +4,6 @@
   "description": "vue3-ssr-template",
   "license": "MIT",
   "author": "ukyi",
-  "engines": {
-    "node": ">=16.14.0"
-  },
   "volta": {
     "node": "16.14.0"
   },
