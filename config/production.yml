@@ -1,0 +1,35 @@
+context:
+  environment: production
+  port: 80
+
+headers:
+  countryLanguage: "x-country-language"
+
+assetsDir: assets
+
+internationalization:
+  defaultCountry: KR
+  defaultLanguage: ko
+  languages:
+    - en
+    - ko
+
+cacheControl:
+  # Cache duration in minutes
+  pages:
+    category: 360
+    home: 15552000
+  static:
+    robots: 86400
+    favicon: 15552000
+    asset: 15552000
+
+thirdPartyScripts:
+  - id: fake-uri
+    uri: https://third-party-fake-domain/third-party-fake-path.js
+    node: body
+    async: true
+    defer: true
+  - id: fake-body
+    body: (function () { console.log('loading third-party with body'); } )();
+    node: head

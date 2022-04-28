@@ -1,0 +1,49 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "project": "./tsconfig.eslint.json"
+  },
+  "extends": [
+    "plugin:vue/vue3-essential",
+    "airbnb-base",
+    "airbnb-typescript/base",
+    "@vue/typescript/recommended"
+  ],
+  "rules": {
+    "no-console": "warn",
+    "no-debugger": "warn",
+    "no-alert": "warn",
+    "no-plusplus": "off",
+    "no-throw-literal": "off",
+    "no-unused-vars:": "off",
+    "no-param-reassign": "off",
+    "no-unsafe-optional-chaining": "off",
+    "no-underscore-dangle": "off",
+    "no-promise-executor-return": "off",
+    "max-len": "off",
+    "import/no-extraneous-dependencies": "off",
+    "arrow-parens": ["error", "as-needed"],
+    "func-names": ["error", "never"],
+    "lines-between-class-members": [
+      "error", "always", {
+        "exceptAfterSingleLine": true
+      }
+    ],
+    "class-methods-use-this": "off",
+    "object-curly-newline": "off",
+    "vue/multi-word-component-names": "off",
+    "import/extensions": "off",
+    "import/no-cycle": "off",
+    "import/no-unresolved": "off",
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/keyword-spacing": "off",
+    "@typescript-eslint/no-redeclare": "off",
+    "@typescript-eslint/no-shadow": "off",
+    "@typescript-eslint/lines-between-class-members": "off"
+  }
+}

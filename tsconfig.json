@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "skipLibCheck": true,
+    "types": ["node", "webpack-env"],
+    "typeRoots": ["src/**/*.d.ts"],
+    "strictPropertyInitialization": false
+  },
+  "include": ["src/**/*.ts", "src/**/*.vue", "server/**/*.ts", "build/**/*.js"],
+  "exclude": ["node_modules"]
+}
